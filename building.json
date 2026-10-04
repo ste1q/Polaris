@@ -1,0 +1,83 @@
+{
+  "building": "Engineering building",
+  "description": "Undirected graph. The FIRST node listed is always the starting position. Marker colors are shared (blue = Room 195, 196 and 197; green = bathroom; red = staircase), so the program tells the blue markers apart by following the guided order of the route.",
+  "calibrated": false,
+  "calibration_note": "distance_m and heading_deg are PLACEHOLDERS. Walk the real hallway and replace them. heading_deg is the compass-style direction of travel along the edge FROM 'from' TO 'to' (0=north, 90=east, 180=south, 270=west). The reverse direction is computed automatically (+180). Left/right turns are derived from the change in heading.",
+  "nodes": {
+    "room_195": {
+      "label": "Room 195",
+      "type": "room",
+      "marker_color": "blue",
+      "aliases": [
+        "195",
+        "room one nine five"
+      ],
+      "capacity": 20
+    },
+    "room_196": {
+      "label": "Room 196",
+      "type": "room",
+      "marker_color": "blue",
+      "aliases": [
+        "196"
+      ],
+      "capacity": 20
+    },
+    "bathroom": {
+      "label": "Bathroom",
+      "type": "bathroom",
+      "marker_color": "green",
+      "aliases": [
+        "restroom",
+        "toilet",
+        "washroom"
+      ],
+      "capacity": 4
+    },
+    "staircase": {
+      "label": "Staircase",
+      "type": "staircase",
+      "marker_color": "red",
+      "aliases": [
+        "stairs",
+        "stairway"
+      ],
+      "capacity": 6
+    },
+    "room_197": {
+      "label": "Room 197",
+      "type": "room",
+      "marker_color": "blue",
+      "aliases": [
+        "197"
+      ],
+      "capacity": 20
+    }
+  },
+  "edges": [
+    {
+      "from": "room_195",
+      "to": "room_196",
+      "distance_m": 6,
+      "heading_deg": 90
+    },
+    {
+      "from": "room_196",
+      "to": "bathroom",
+      "distance_m": 8,
+      "heading_deg": 90
+    },
+    {
+      "from": "bathroom",
+      "to": "staircase",
+      "distance_m": 5,
+      "heading_deg": 180
+    },
+    {
+      "from": "staircase",
+      "to": "room_197",
+      "distance_m": 7,
+      "heading_deg": 180
+    }
+  ]
+}
